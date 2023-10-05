@@ -1,0 +1,64 @@
+{
+    "name": "context-aware-classes",
+    "version": "0.0.1",
+    "private": false,
+    "main": "src/index.tsx",
+    "author": "Grégoire Thibaud <gregoire@creastel.com>",
+    "license": "SEE LICENSE IN ./LICENSE",
+    "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@owlgrid-dev/generators": "^0.0.24",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "scripts": {
+        "dev": "vite",
+        "ci": "yarn lint",
+        "test": "tsc",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+        "lint": "tslint -p tsconfig.json",
+        "deploy": "yarn build && firebase deploy --only hosting"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "prettier": "@owlgrid-dev/prettier-config",
+    "lint-staged": {
+        "*.{json,md,css}": [
+            "prettier --write"
+        ],
+        "*.{js,jsx,ts,tsx}": [
+            "prettier --write",
+            "tslint -p tsconfig.json"
+        ]
+    },
+    "eslintConfig": {
+        "extends": "plugin:react-hooks/recommended"
+    },
+    "devDependencies": {
+        "@owlgrid-dev/prettier-config": "^0.0.6",
+        "@types/autosuggest-highlight": "^3.2.0",
+        "@types/node": "^18.8.2",
+        "@types/react": "^18.0.21",
+        "@types/react-dom": "^18.0.6",
+        "@types/react-syntax-highlighter": "^15.5.6",
+        "@vitejs/plugin-react": "^2.1.0",
+        "eslint": "^8.48.0",
+        "prettier": "^2.8.3",
+        "prettier-plugin-organize-imports": "^3.2.2",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^4.9.4",
+        "vite": "^4.0.4"
+    }
+}
